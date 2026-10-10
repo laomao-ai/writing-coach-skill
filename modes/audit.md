@@ -1,14 +1,16 @@
 # 模式 B：体检（五关评分）
 
-只出报告，不改正文。按五关顺序过一遍（评分锚点见 gates/README.md），每关对应的检查清单：
+只出报告，不改正文。第一步先判断文体（masters/README.md 的路由表），在报告开头写明“文体：××”；然后按五关顺序过一遍（评分锚点见 gates/README.md）：
 
-| 关 | 检查清单 | 默认请的大师 |
+| 关 | 检查清单 | 方法卡 |
 |---|---|---|
-| ① 立意 | checklists/logic.md 第 1 组 | 金瑟、戈德堡 |
-| ② 结构 | checklists/logic.md 第 2 组；methods/pyramid.md | 明托、麦基 |
-| ③ 证据 | checklists/facts.md | 阿伦斯 |
-| ④ 语言 | checklists/ai-flavor-zh.md；checklists/typo-zh.md | 平克、金 |
-| ⑤ 读者 | checklists/logic.md 第 3 组 | 希思兄弟 |
+| ① 立意 | checklists/logic.md 第 1 组 | 按文体：feynman、zettelkasten |
+| ② 结构 | checklists/logic.md 第 2 组 | 按文体：pyramid、scqa、inverted-pyramid |
+| ③ 证据 | checklists/facts.md | 观点评论用 harvard |
+| ④ 语言 | checklists/ai-flavor-zh.md；checklists/typo-zh.md | 全局：余光中卡；按文体：williams、iceberg |
+| ⑤ 读者 | checklists/logic.md 第 3 组 | success |
+
+每关引用的大师只从该文体的名单里选。体检结束时，针对得分最低的一关，从 drills/README.md 推荐一个练法，写在处方最后一条。
 
 ## 规则
 1. **每个问题必须带原文定位**（段落 + 引用原句，不超过 30 字），没有定位的问题不写。
@@ -20,3 +22,10 @@
 7. 作者只要求看某几关（如“重点看事实”），只详评那几关，其余各一句话。
 
 报告格式见 templates/audit-report.md。
+
+## 只核事实
+用户只要查数字、引语时，跳过评分，只走 checklists/facts.md：
+1. 逐条列出稿中的数字、日期、人名机构、引语、研究结论，标出原文位置。
+2. 每条给状态：已核实 / 待核实 / 疑似错误，规则同铁律 2。没联网时最多到“待核实”。
+3. 没有来源的数字和引语单独列一张表放在最前面，后面附检索建议。
+4. 不改正文，不替作者补数字、补出处。

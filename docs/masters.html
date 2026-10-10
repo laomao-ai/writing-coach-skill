@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大师展厅 · writing-coach</title>
+<meta name="description" content="14 位写作大师、9 套方法、6 种练法。先认文体，再请对口的大师会诊。请的是方法，不是本人。">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#12110E;color:#EDE8DC;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(1200px 600px at 15% -10%,rgba(201,164,92,.16),transparent 60%),radial-gradient(900px 500px at 100% 0%,rgba(18,148,95,.14),transparent 60%)}
+a{color:inherit}
+.wrap{max-width:1240px;margin:auto;padding:36px 24px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;font:700 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.2em;color:#9C9483}
+.top a{text-decoration:none;border:1px solid #3A362D;border-radius:999px;padding:8px 14px;color:#EDE8DC}
+.top a:hover{border-color:#C9A45C}
+h1{font-family:"Songti SC","STSong","Noto Serif SC","SimSun",serif;font-size:56px;margin:34px 0 10px;letter-spacing:.04em;font-weight:900}
+h1 em{font-style:normal;background:linear-gradient(90deg,#E9CF8E,#C9A45C 60%,#8E7038);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:760px;color:#B5AD9C;font-size:16px;line-height:1.9;margin:0}
+.nums{display:flex;gap:28px;margin:26px 0 0;flex-wrap:wrap}
+.nums div{border-left:2px solid #C9A45C;padding-left:12px}
+.nums b{display:block;font-size:30px;font-family:"Songti SC","STSong",serif}.nums span{font-size:12px;color:#9C9483}
+h2{font-family:"Songti SC","STSong","Noto Serif SC",serif;font-size:28px;margin:64px 0 6px;letter-spacing:.04em}
+.sub{color:#9C9483;font-size:14px;margin:0 0 18px;line-height:1.75;max-width:820px}
+.genres{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.genres button{font-family:inherit;font-size:13px;font-weight:600;color:#CFC7B5;background:#1D1B16;border:1px solid #3A362D;border-radius:999px;padding:8px 14px;cursor:pointer}
+.genres button[aria-pressed=true]{background:#C9A45C;color:#17150F;border-color:#C9A45C}
+.genres button:focus-visible,.card:focus-visible{outline:2px solid #12945F;outline-offset:3px}
+.route{min-height:44px;font-size:13px;color:#B5AD9C;margin:6px 0 18px;line-height:1.7}
+.route b{color:#E9CF8E}
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{position:relative;height:410px;perspective:1200px;border:0;background:none;padding:0;cursor:pointer;font-family:inherit;color:inherit;text-align:left;transition:opacity .25s,filter .25s}
+.card.dim{opacity:.22;filter:grayscale(1)}
+.in{position:absolute;inset:0;transition:transform .6s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.card.flip .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;
+background:linear-gradient(160deg,#25221C,#17150F 70%);border:1px solid #3F3A30;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.face::before{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;background:linear-gradient(135deg,var(--c),transparent 40%,transparent 60%,var(--c));
+-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.9;pointer-events:none}
+.face::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,240,200,.10) 45%,transparent 60%);transform:translateX(var(--sx,-60%));transition:transform .5s;pointer-events:none}
+.card:hover .face::after{--sx:60%}
+.front{padding:18px 18px 16px;display:flex;flex-direction:column}
+.hd{display:flex;justify-content:space-between;font:700 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.18em;color:#9C9483}
+.hd .era{color:var(--c)}
+.seal{position:relative;width:132px;height:132px;margin:16px auto 10px}
+.seal svg{position:absolute;inset:0}
+.seal span{position:absolute;inset:0;display:grid;place-items:center;font-family:"Songti SC","STSong","Noto Serif SC","SimSun",serif;font-size:58px;font-weight:900;color:#F3E6C4;text-shadow:0 2px 0 rgba(0,0,0,.4)}
+.nm{text-align:center;font-family:"Songti SC","STSong",serif;font-size:24px;font-weight:900;letter-spacing:.08em}
+.en{text-align:center;font:600 10px/1.6 ui-monospace,Menlo,monospace;letter-spacing:.16em;color:#8C8473;text-transform:uppercase}
+.work{text-align:center;font-size:12px;color:#B5AD9C;margin:6px 0 10px;min-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.skill{margin:0 auto 12px;font-size:12px;font-weight:700;color:#17150F;background:var(--c);border-radius:6px;padding:5px 10px}
+.skill::before{content:"绝技 · ";font-weight:500;opacity:.75}
+.stats{margin-top:auto;display:grid;gap:5px}
+.stat{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:8px;font-size:11px;color:#9C9483}
+.stat i{display:flex;gap:3px}.stat i s{flex:1;height:6px;border-radius:2px;background:#2E2A22}
+.stat i s.on{background:var(--c)}
+.glob{position:absolute;top:44px;right:14px;font-size:10px;font-weight:700;color:#17150F;background:#E9CF8E;border-radius:999px;padding:3px 8px}
+.back{transform:rotateY(180deg);padding:18px;overflow:auto;font-size:12.5px;line-height:1.75;color:#D7D0BF}
+.back h3{margin:0 0 2px;font-family:"Songti SC","STSong",serif;font-size:17px;color:#F3E6C4}
+.back .src{color:#8C8473;font-size:11px;margin:0 0 8px}
+.back h4{margin:10px 0 4px;font-size:11px;letter-spacing:.14em;color:var(--c)}
+.back ol,.back ul{margin:0;padding-left:18px}
+.back .ck{margin-top:10px;font-size:11px;color:#8C8473;border-top:1px dashed #3A362D;padding-top:8px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.tile{background:#1B1915;border:1px solid #33302A;border-radius:14px;padding:14px 16px}
+.tile b{font-size:15px}.tile small{display:block;font:700 10px/1.6 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#9C9483;margin:2px 0 6px}
+.tile p{margin:0;font-size:12.5px;color:#B5AD9C;line-height:1.7}
+.rules{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-top:8px}
+.rules div{font-size:13px;color:#CFC7B5;background:#1B1915;border:1px solid #33302A;border-radius:12px;padding:12px 14px;line-height:1.7}
+.rules div b{color:#E9CF8E}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid #2E2A22;color:#8C8473;font-size:12.5px;line-height:1.8}
+@media (max-width:640px){h1{font-size:38px}}
+@media (prefers-reduced-motion:reduce){.in,.face::after,.card{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><span>WRITING-COACH · MASTERS HALL</span><a href="./">← 返回首页</a></div>
+
+<h1>大师<em>展厅</em></h1>
+<p class="lead">14 位写作大师，各自带着一本讲写作的代表作。先认出你的稿子是哪一类，再请这一类对口的 3 位来挑问题。请的是他们的方法，不是本人：不模仿口吻，不按他们的文风改你的稿子，每条主张都写明出处。</p>
+<div class="nums"><div><b>14</b><span>位大师 · 中文 9 外文 5</span></div><div><b>9</b><span>套方法</span></div><div><b>6</b><span>种练法</span></div><div><b>10</b><span>种文体路由</span></div></div>
+
+<h2>按文体请人</h2>
+<p class="sub">选一类文体，亮起来的就是这类稿子默认请的大师。余光中做全局语言检查，每一类都在，不占 3 个名额。点任意一张卡翻到背面，看他会问你什么、能查出什么、哪里不适用。</p>
+<div class="genres" id="genres" role="group" aria-label="文体"></div>
+<div class="route" id="route" aria-live="polite"></div>
+<div class="deck" id="deck"></div>
+
+<h2>方法库：换谁讲都一样</h2>
+<p class="sub">和作者无关的通用框架单独成库。体检时按文体选用，引导写时由你挑。</p>
+<div class="tiles" id="methods"></div>
+
+<h2>练法库：下一步练什么</h2>
+<p class="sub">不打分。引导写时你卡住了，或者体检做完，针对最弱的那一关推荐一个。</p>
+<div class="tiles" id="drills"></div>
+
+<h2>入选规矩</h2>
+<div class="rules">
+<div><b>五道门槛</b>：顶尖、有知名度、有专门讲写作的代表作品（书或名篇）、能真正指导写作、对中文写作适用。</div>
+<div><b>方法不是大师</b>：金字塔原理、SCQA、SUCCESs 这类换谁讲都一样的框架，放进方法库。</div>
+<div><b>不乱请神</b>：每篇最多 3 位，按文体路由；你点名谁就请谁，但会提醒他更适合哪类稿子。</div>
+<div><b>可溯源</b>：卡上只放能回原书核对的主张，用自己的话转述，核到篇名或章节才算“已核”。</div>
+<div><b>不用真人肖像</b>：卡面是印章式徽记，不画像、不仿照片。</div>
+<div><b>不替你想</b>：大师只提问、只挑问题。要成稿时只用你给的料，不套大师的腔调，写出来还是你的样子。</div>
+</div>
+
+<footer>属性条表示这位大师的主张主要覆盖哪几关，是展示用的，不是给大师打分。卡片内容由 masters/*.md 自动生成，以仓库为准。书目与核对状态见 <a href="https://github.com/laomao-ai/writing-coach-skill/blob/main/books/SOURCES.md">books/SOURCES.md</a>。MIT 协议开源 · <a href="https://github.com/laomao-ai/writing-coach-skill">GitHub</a></footer>
+</div>
+<script>
+var MASTERS=[{"k": "yeshengtao", "n": "叶圣陶", "t": "叶圣陶 · 《叶圣陶谈写作》", "work": "《叶圣陶谈写作》", "src": "《落花水面皆文章——叶圣陶谈写作》（开明出版社，2017）；另见《作文论》（1924）", "g": "语言 · 读者", "genre": "通用、干货教程、科技科普、测评体验、经验复盘", "core": ["写文章跟说话是一回事，写下来的话要像说出来的一样明白、自然（《写文章跟说话》）。", "写完把稿子念几遍，念着不顺的地方就改（《把稿子念几遍》）。", "先想清楚再写，写诚实的、自己的话（《想清楚然后写》《诚实的自己的话》）。"], "q": ["这一句念出来顺吗？哪里你会自己改口？", "换成跟朋友当面说，你会怎么讲这件事？", "这一段有实在的内容吗，还是只有说法？"], "f": ["书面腔、念不顺", "为了“像文章”而绕弯子", "内容空，靠修辞撑"], "lim": ["主张面向一般写作，不针对文体；用在故事、散文类时只借“念得顺”。"], "st": "书名、出版社与篇目已核（据馆藏目录）；主张为转述，引原句请对照原书。", "seal": "叶", "en": "Ye Shengtao", "era": "现代", "skill": "写话即说话", "stats": [1, 2, 0, 3, 3]}, {"k": "luxun", "n": "鲁迅", "t": "鲁迅 · 《答北斗杂志社问》", "work": "《答北斗杂志社问》", "src": "《二心集·答北斗杂志社问》（1931）", "g": "语言", "genre": "观点评论", "core": ["写完至少看两遍，把可有可无的字、句、段删去，毫不可惜。（自述转述）", "不生造除了自己谁也不懂的形容词之类。", "多看大作家的作品，看他们怎样写。"], "q": ["这一段里，哪个字、哪一句删掉后意思不变？", "哪个词是你造的、读者要停下来猜？", "你自己读了第二遍吗？读到哪里卡住了？"], "f": ["可有可无的字句段", "生造词、硬造的形容", "初稿直接发，没有回看"], "lim": ["只借他谈写作的方法，不用鲁迅文风改稿；网上托名鲁迅的“名言”极多，本卡之外的鲁迅语录一律待核实。"], "st": "篇名、收录集与大意已核；如要直接引用原句，请对照《鲁迅全集》原文。", "seal": "鲁", "en": "Lu Xun", "era": "现代", "skill": "删去可有可无", "stats": [0, 1, 0, 3, 1]}, {"k": "hushi", "n": "胡适", "t": "胡适 · 《文学改良刍议》", "work": "《文学改良刍议》", "src": "《新青年》第二卷第五号（1917 年 1 月）", "g": "立意 · 语言", "genre": "观点评论、商业职场", "core": ["提出文学改良“八事”：言之有物、不摹仿古人、讲求文法、不作无病之呻吟、去烂调套语、不用典、不讲对仗、不避俗字俗语。", "文章先要有“物”，也就是真情感和真思想；没有就别硬写。", "今天借用其中四条：言之有物、不作无病之呻吟、去套语、不摹仿。“不用典”“不讲对仗”针对的是旧文学，不照搬。"], "q": ["删掉形容词和套话，这一段还剩什么实在的意思？", "这一处的情绪，是你真有，还是写到这里“该有”？", "哪句话是在别人文章里见过的现成说法？"], "f": ["空话、套话、行业黑话", "无病呻吟式的升华", "模仿流行文体的句式"], "lim": ["写于白话文运动初期，针对的是文言旧文学；只取“言之有物、去套语”的精神，不按八条逐条打分。"], "st": "篇名、刊期与“八事”条目已核（公版文献）。", "seal": "胡", "en": "Hu Shih", "era": "现代", "skill": "言之有物", "stats": [3, 0, 1, 2, 1]}, {"k": "wangzengqi", "n": "汪曾祺", "t": "汪曾祺 · 《汪曾祺的写作课》", "work": "《汪曾祺的写作课》", "src": "《汪曾祺的写作课》（江苏凤凰文艺出版社，2020）所收《小说的思想和语言》《揉面——谈语言运用》等；另见《晚翠文谈》（1988）", "g": "语言", "genre": "故事人物、随笔散文", "core": ["语言不是外壳，语言本身就是内容；他说过“写小说就是写语言”（《小说的思想和语言》）。", "好语言拆不开：要看字与字、句与句、段与段的关系，讲究一气贯通的“文气”。", "长句短句怎么搭配、声调高低怎么交替，决定读起来的节奏。"], "q": ["这一段读下来，句子之间有没有气息上的连贯？", "哪个修饰是为了“好看”才加的？去掉后会不会更干净？", "长短句怎么排的？是不是一路长句或一路短句？"], "f": ["句子各自为政，缺少连贯", "华丽修饰压过意思", "节奏一路平铺"], "lim": ["主要谈小说和散文；不用于干货、商业、科技稿。只学眼光，不模仿汪氏文风。"], "st": "书名、篇目与“写小说就是写语言”的出处已核。", "seal": "汪", "en": "Wang Zengqi", "era": "当代", "skill": "语言即内容", "stats": [1, 0, 0, 3, 1]}, {"k": "laoshe", "n": "老舍", "t": "老舍 · 《出口成章》", "work": "《出口成章》", "src": "《出口成章——论文学语言及其他》（作家出版社，1964）", "g": "语言", "genre": "随笔散文（含情感）", "core": ["用最普通的字写出不普通的意思，先把话说清楚。", "普通人要说十句的事，写作者设法用三四句说完；能用一个字省下一句话，就是本事。", "警惕“学生腔”：生硬的书面套话和凑数的形容。"], "q": ["这段话念给家里长辈听，他能听懂吗？", "这十句能不能压成三四句？", "哪个词是为了“像文章”才用的？"], "f": ["学生腔、书面套话", "该短不短", "形容词凑数"], "lim": ["书中不少篇谈戏剧和人物对话；用于公众号只借“白话、简练、去学生腔”，不模仿京味。"], "st": "书名、出版年与篇目（《学生腔》《谈简练》《越短越难》《关于文学的语言问题》）已核；主张为转述。", "seal": "舍", "en": "Lao She", "era": "现代", "skill": "普通字写不普通的意思", "stats": [0, 0, 0, 3, 2]}, {"k": "xiamianzun", "n": "夏丏尊", "t": "夏丏尊 · 《文心》《文章作法》", "work": "《文心》《文章作法》", "src": "《文心》（与叶圣陶合著，开明书店，1934）；《文章作法》（与刘薰宇合编，开明书店，1926）", "g": "结构 · 立意", "genre": "文化读书", "core": ["先分清文体：记事、叙事、说明、议论、小品各有写法，写之前想清楚这一篇是哪一种。", "写自己真看到、真想到的；材料要取舍，也要排顺序。", "读和写是一回事：读懂别人的文章怎么组织，才写得好自己的。"], "q": ["这篇主要是在说明、议论还是叙事？中间有没有混进另一种？", "这些材料里，哪几条可以舍掉？", "顺序为什么这样排？换个顺序会不会更清楚？"], "f": ["文体混杂", "材料堆砌、不取舍", "顺序随意"], "lim": ["原是中学作文讲义，例文较旧，分类方法通用。和叶圣陶分工：叶管“写话、修改”，夏管“文体、取舍”。"], "st": "两书书名、合著者、出版年与章节结构（记事文、叙事文、说明文、议论文、小品文）已核。", "seal": "夏", "en": "Xia Mianzun", "era": "现代", "skill": "先分文体再取舍", "stats": [2, 3, 0, 1, 1]}, {"k": "zhuguangqian", "n": "朱光潜", "t": "朱光潜 · 《咬文嚼字》", "work": "《咬文嚼字》", "src": "《谈文学》（朱光潜，1946）所收《咬文嚼字》", "g": "语言 · 立意", "genre": "随笔散文、文化读书", "core": ["咬文嚼字表面是斟酌文字，实际是斟酌思想和情感：话说不准，往往是意思没想清。", "改一个字，意思和情味都会变；用字要和你真正想表达的东西一致。", "警惕套语和滥调：它们省了思考，也丢了自己的意思。"], "q": ["这句话说不准，是用词问题，还是你还没想清楚？", "这个词换成近义词，意思和语气变了吗？哪个才是你要的？", "哪一句是现成的套语？你自己的说法是什么？"], "f": ["用词含糊、近义词混用", "套语滥调", "表面是文字问题、实际是想法没想清"], "lim": ["偏文学语境；用在说明文、干货文时只用“用词要准”这一条。"], "st": "篇名、收录书与大意已核；文中例子与原句请对照原书。", "seal": "朱", "en": "Zhu Guangqian", "era": "现代", "skill": "咬文嚼字", "stats": [2, 0, 0, 3, 0]}, {"k": "liuxie", "n": "刘勰", "t": "刘勰 · 《文心雕龙》", "work": "《文心雕龙》", "src": "《文心雕龙》（南朝梁·刘勰）；推荐对照今注本（如范文澜注、周振甫今译），版本：待补", "g": "立意 · 结构", "genre": "文化读书", "core": ["《熔裁》：动笔前先“设情”定主旨、再“酌事”选材、再“撮辞”定措辞；不合主旨的内容要裁掉。（自述转述，非原文）", "《附会》：谋篇要统摄首尾，使各部分成为一个整体。", "《情采》：文采要服务于情理，为文造情不如为情造文。"], "q": ["这篇的“情”（你真正要表达的）是什么？哪些材料与它无关？", "首尾是否呼应，中间各段是否都挂在同一根线上？", "哪一处是为了文采而文采？"], "f": ["材料多而杂，没有为主旨裁剪", "首尾脱节", "辞藻压过内容"], "lim": ["是古代文论，概念需要转译；不要在报告里大段引用古文，给作者看的是转述。"], "st": "《熔裁》《附会》《情采》篇名与大意已核；“三准”的具体表述请以今注本核对后再引用。", "seal": "勰", "en": "Liu Xie", "era": "古典", "skill": "为情造文", "stats": [3, 3, 0, 2, 0]}, {"k": "yuguangzhong", "n": "余光中", "t": "余光中 · 《怎样改进英式中文——论中文的常态与变态》", "work": "《怎样改进英式中文——论中文的常态与变态》", "src": "1987 年文章；收入《余光中谈翻译》（中国对外翻译出版公司，2002），目录题为《中文的常态与变态》", "g": "语言（全局检查）", "genre": "全部文体（全局语言检查，不占会诊的 3 个名额）", "core": ["中文的常态是措词简洁、句式灵活、声调铿锵；西化的毛病是化简为繁、以拙代巧，比如把“因此”写成“基于这个原因”。", "警惕抽象名词作主语、“进行/作出 + 名词”这类弱动词、成串的“的”、可有可无的“被”和“关于/对于”。", "不反对新句法，反对不必要的西化；成语全靠古人不行，一个都不会用也不行。"], "q": ["这一句里有没有“进行/作出/加以 + 名词”？换成一个动词行不行？", "哪里连着出现三个以上“的”？", "主语是不是一个抽象名词？换成做事的人，会不会更清楚？"], "f": ["名词化、弱动词", "“的”字成串", "抽象名词作主语", "可有可无的“被”“关于”“对于”"], "lim": ["针对的是翻译腔和书面腔；技术稿里必要的术语不算欧化。作者有意写的长句属于风格，只提示，不强改。"], "st": "篇名、年份、收录书已核；同书另收《论中文之西化》《论的的不休》。具体病例分类以原文为准。", "seal": "余", "en": "Yu Kwang-chung", "era": "当代", "skill": "治欧化中文", "stats": [0, 0, 0, 3, 1]}, {"k": "orwell", "n": "乔治·奥威尔", "t": "乔治·奥威尔 · 《政治与英语》（文章）", "work": "《政治与英语》（文章）", "src": "Politics and the English Language（George Orwell，1946）", "g": "语言", "genre": "通用、观点评论、测评体验", "core": ["不用见惯了的比喻。", "能用短词就不用长词；能删的词就删。", "能用主动就不用被动；能用日常词就不用术语；为了不说粗话，宁可打破上述规则。"], "q": ["这个比喻读者是不是已经见过一百次？", "这一句里有没有可以删的词？", "这个术语换成日常说法，意思会丢吗？"], "f": ["陈腐比喻", "术语和长词装深刻", "被动句掩盖了“谁做了什么”"], "lim": ["六条针对英语与政治宣传语言；中文被动句的情形不同，只在“掩盖行为主体”时提示。"], "st": "六条规则出自该文结尾，已核。", "seal": "O", "en": "George Orwell", "era": "西方", "skill": "写作六条", "stats": [1, 0, 2, 3, 1]}, {"k": "zinsser", "n": "威廉·津瑟", "t": "威廉·津瑟 · 《写作法宝》（On Writing Well）", "work": "《写作法宝》（On Writing Well）", "src": "On Writing Well（William Zinsser，1976 起多次修订）；中文版译名不一：待补", "g": "语言 · 立意", "genre": "通用、干货教程、商业职场、科技科普、测评体验、经验复盘", "core": ["清除杂物：每个不起作用的词、重复的意思、空洞的修饰都要删。", "简洁不等于简陋，前提是先想清楚。", "一篇文章只做一件事：写之前决定好讲什么、对谁讲、用什么语气，并保持统一。"], "q": ["这一句去掉哪几个字意思不变？", "这篇只做一件事吗？哪一段在做另一件事？", "语气从头到尾一致吗？哪里突然变得像宣传稿？"], "f": ["赘词、重复表达", "一篇里塞了两个主题", "语气突变（口语忽然变成公文腔）"], "lim": ["极简不是唯一的好；作者刻意的铺陈、口头禅属于声音，提示而不强改。"], "st": "杂物（Clutter）、简洁（Simplicity）、统一（Unity）：均为本书章节主题，已核。", "seal": "Z", "en": "William Zinsser", "era": "西方", "skill": "清除杂物", "stats": [3, 1, 1, 3, 2]}, {"k": "pinker", "n": "史蒂芬·平克", "t": "史蒂芬·平克 · 《风格感觉》", "work": "《风格感觉》", "src": "The Sense of Style（Steven Pinker，2014）；中文版：待补", "g": "语言 · 读者", "genre": "干货教程、商业职场、科技科普", "core": ["“古典风格”：把写作当作带读者看一样东西，作者和读者是平等的，目标是让对方看见。", "知识的诅咒：作者很难想象不知道某件事是什么感觉，于是跳步、用黑话、省掉例子。", "句子要让读者少费力：主干清楚，关键信息放在句末，长句要有清晰的连接。"], "q": ["哪一处你默认读者已经知道、其实他们不知道？", "这一段，读者能“看见”什么？还是只有抽象词？", "哪个缩写、术语第一次出现时没解释？"], "f": ["术语、缩写不解释", "抽象名词堆叠，没有画面", "为了显得谨慎而层层对冲（注意：作者真实的不确定不算）"], "lim": ["本书以英语为例，句法建议迁移到中文要谨慎；中文语序问题请以中文规范为准。"], "st": "古典风格（第 2 章）、知识的诅咒（第 3 章）：已核。", "seal": "P", "en": "Steven Pinker", "era": "西方", "skill": "知识的诅咒", "stats": [0, 1, 0, 3, 3]}, {"k": "king", "n": "斯蒂芬·金", "t": "斯蒂芬·金 · 《写作这回事》", "work": "《写作这回事》", "src": "On Writing（Stephen King，2000）；中文版：待补", "g": "语言", "genre": "经验复盘、故事人物", "core": ["多读多写，没有捷径。", "通往地狱的路是副词铺成的：能用准确的动词，就别用“非常地、狠狠地”。", "初稿关门写，二稿开门改；二稿 = 初稿 − 10%。"], "q": ["这一段删掉 10%，删哪里？", "哪个“非常”“特别”“极其”可以换成一个具体的事实？", "哪一段是你最舍不得、但和主题关系最弱的？"], "f": ["副词、程度词堆叠", "冗长铺垫", "为了漂亮而保留的离题段落"], "lim": ["写的是小说经验；“删 10%”是经验法则不是硬指标，作者文风偏繁也可以是风格。"], "st": "副词、二稿减 10%、关门写开门改：书中广为引用的建议，已核。页码：待核。", "seal": "K", "en": "Stephen King", "era": "西方", "skill": "删副词", "stats": [0, 1, 0, 3, 1]}, {"k": "mckee", "n": "罗伯特·麦基", "t": "罗伯特·麦基 · 《故事》", "work": "《故事》", "src": "Story（Robert McKee，1997）；中文版：待补", "g": "结构 · 读者", "genre": "故事人物", "core": ["故事由冲突推动：人物想要什么，什么在阻止他。", "期待与结果之间出现落差，读者才会继续读。", "整篇要有一个“控制性思想”，所有场景为它服务。"], "q": ["这篇的“想要”和“阻力”分别是什么？在开头出现了吗？", "哪一处让读者以为会这样、结果却那样？", "删掉哪一段，全文的意思不变？那一段为什么还在？"], "f": ["开头没有冲突，平铺背景", "全程没有转折，读者知道结局就不想读", "段落与核心思想无关"], "lim": ["本书面向剧本；用在观点文、干货文时只借“冲突”和“控制性思想”，不要求有人物弧光。"], "st": "冲突、期待与结果的落差、控制性思想：书中核心概念，已核。章节页码：待核。", "seal": "M", "en": "Robert McKee", "era": "西方", "skill": "期待与结果的落差", "stats": [1, 3, 0, 1, 3]}];
+var GATES=["立意","结构","证据","语言","读者"];
+var ERA={"古典":"#C77B4A","现代":"#C9A45C","当代":"#5FB38A","西方":"#7FA2D9"};
+var ROUTE=[
+["全部",null,""],
+["通用",["yeshengtao","zinsser","orwell"],"金字塔原理"],
+["观点评论",["luxun","hushi","orwell"],"哈佛论证写作 · 查有没有回应最强的反方"],
+["干货教程",["zinsser","yeshengtao","pinker"],"金字塔原理、费曼技巧"],
+["商业职场",["pinker","zinsser","hushi"],"金字塔原理、SCQA、威廉姆斯"],
+["科技科普",["pinker","zinsser","yeshengtao"],"费曼技巧、倒金字塔、威廉姆斯"],
+["测评体验",["zinsser","yeshengtao","orwell"],"SCQA、倒金字塔 · 查亲测细节还是官方通稿"],
+["经验复盘",["king","yeshengtao","zinsser"],"金字塔原理 · 查故事有没有落到能用的结论"],
+["故事人物",["king","mckee","wangzengqi"],"冰山理论"],
+["随笔散文",["wangzengqi","zhuguangqian","laoshe"],"冰山理论 · 查真诚还是煽情"],
+["文化读书",["liuxie","zhuguangqian","xiamianzun"],"卡片笔记"]];
+var METHODS=[["金字塔原理","结构","结论先行，上层概括下层；先找到读者心里的问题。明托、高杉尚孝"],["SCQA","结构 · 读者","情境、冲突、问题、回答，用来写开头"],["哈佛论证写作","证据","论点、证据、反方、回应；不回避最强的反对意见"],["倒金字塔","结构","最重要的放最前，读者随时离开也拿到了要点"],["SUCCESs","读者","简单、意外、具体、可信、情感、故事。希思兄弟"],["费曼技巧","立意","讲给外行听，卡住的地方就是你没想清楚的地方"],["冰山理论","语言","知道的多，写出来的少；删掉的部分读者也感受得到"],["威廉姆斯","语言","角色当主语，动作当动词，治“进行了讨论”"],["卡片笔记","立意 · 证据","用自己的话记，素材带出处，文章从笔记里长出来。阿伦斯"]];
+var DRILLS=[["富兰克林重写法","结构 · 语言","读好文章只记要点，隔几天自己重写，再对照原文"],["仿写","语言","照一段好文字的句式和节奏，换个题材写一段"],["自由写作","立意","定时 10 分钟手不停，写完再找真想说的那句。戈德堡"],["允许烂初稿","习惯","初稿只求写完，把大题目切成今天能写完的一小块。拉莫特"],["刻意练习","最弱的那一关","每次只练一个薄弱点，写完马上体检那一关。艾利克森"],["日更","习惯","固定字数和时间，先练产量，每周挑一篇完整体检"]];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function $(s){return document.querySelector(s)}
+function ring(c,txt){var id="r"+Math.random().toString(36).slice(2,8);
+return'<svg viewBox="0 0 132 132" aria-hidden="true"><defs><path id="'+id+'" d="M66,66 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs>'+
+'<circle cx="66" cy="66" r="63" fill="none" stroke="'+c+'" stroke-opacity=".35"/>'+
+'<circle cx="66" cy="66" r="42" fill="'+c+'" fill-opacity=".16" stroke="'+c+'" stroke-width="2"/>'+
+'<circle cx="66" cy="66" r="36" fill="none" stroke="'+c+'" stroke-opacity=".5" stroke-dasharray="2 4"/>'+
+'<text font-size="8.5" letter-spacing="3" fill="'+c+'" font-family="ui-monospace,Menlo,monospace"><textPath href="#'+id+'">'+esc(txt)+'</textPath></text></svg>'}
+function bars(v){return GATES.map(function(g,i){var s="";for(var j=0;j<3;j++)s+='<s class="'+(j<v[i]?"on":"")+'"></s>';return'<div class="stat"><span>'+g+'</span><i>'+s+'</i></div>'}).join("")}
+function ul(a,t){return"<"+(t||"ul")+">"+a.map(function(x){return"<li>"+esc(x)+"</li>"}).join("")+"</"+(t||"ul")+">"}
+$("#deck").innerHTML=MASTERS.map(function(m,i){var c=ERA[m.era]||"#C9A45C",glob=m.k==="yuguangzhong";
+return'<button type="button" class="card" data-k="'+m.k+'" style="--c:'+c+'" aria-label="'+esc(m.n)+'，'+esc(m.work)+'，点击翻面"><div class="in">'+
+'<div class="face front"><div class="hd"><span>No.'+String(i+1).padStart(2,"0")+'</span><span class="era">'+esc(m.era)+'</span></div>'+(glob?'<span class="glob">全局检查</span>':'')+
+'<div class="seal">'+ring(c,(m.en+" · "+m.en+" · ").toUpperCase())+'<span>'+esc(m.seal)+'</span></div>'+
+'<div class="nm">'+esc(m.n)+'</div><div class="en">'+esc(m.en)+'</div><div class="work">'+esc(m.work)+'</div>'+
+'<div style="text-align:center"><span class="skill">'+esc(m.skill)+'</span></div><div class="stats">'+bars(m.stats)+'</div></div>'+
+'<div class="face back"><h3>'+esc(m.t)+'</h3><p class="src">'+esc(m.src)+'</p><h4>核心主张</h4>'+ul(m.core.slice(0,3))+'<h4>会问你的问题</h4>'+ul(m.q,"ol")+'<h4>不适用 / 局限</h4>'+ul(m.lim)+'<div class="ck">适用文体：'+esc(m.genre)+'<br>核对状态：'+esc(m.st)+'</div></div>'+
+'</div></button>'}).join("");
+[].forEach.call(document.querySelectorAll(".card"),function(c){c.onclick=function(){c.classList.toggle("flip")}});
+var NAME={};MASTERS.forEach(function(m){NAME[m.k]=m.n});
+$("#genres").innerHTML=ROUTE.map(function(r,i){return'<button type="button" aria-pressed="'+(i===0)+'" data-i="'+i+'">'+r[0]+'</button>'}).join("");
+function pick(i){var r=ROUTE[i];[].forEach.call(document.querySelectorAll("#genres button"),function(b,j){b.setAttribute("aria-pressed",j===i)});
+[].forEach.call(document.querySelectorAll(".card"),function(c){var k=c.dataset.k;c.classList.toggle("dim",!!r[1]&&r[1].indexOf(k)<0&&k!=="yuguangzhong")});
+$("#route").innerHTML=r[1]?'<b>'+r[0]+'</b>：请 '+r[1].map(function(k){return NAME[k]}).join("、")+'，余光中做全局语言检查。方法：'+esc(r[2])+'。':'共 14 位。选一类文体，看这类稿子该请谁。'}
+[].forEach.call(document.querySelectorAll("#genres button"),function(b){b.onclick=function(){pick(+b.dataset.i)}});
+pick(0);
+function tiles(el,a){$(el).innerHTML=a.map(function(x){return'<div class="tile"><b>'+esc(x[0])+'</b><small>'+esc(x[1])+'</small><p>'+esc(x[2])+'</p></div>'}).join("")}
+tiles("#methods",METHODS);tiles("#drills",DRILLS);
+</script>
+</body>
+</html>
