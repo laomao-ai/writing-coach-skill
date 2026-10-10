@@ -43,7 +43,7 @@ background:linear-gradient(160deg,#25221C,#17150F 70%);border:1px solid #3F3A30;
 .hd .era{color:var(--c)}
 .seal{position:relative;width:132px;height:132px;margin:16px auto 10px}
 .seal svg{position:absolute;inset:0}
-.seal span{position:absolute;inset:0;display:grid;place-items:center;font-family:"Songti SC","STSong","Noto Serif SC","SimSun",serif;font-size:58px;font-weight:900;color:#F3E6C4;text-shadow:0 2px 0 rgba(0,0,0,.4)}
+.seal img{position:absolute;left:12px;top:12px;width:108px;height:108px;border-radius:50%;object-fit:cover;background:#F4EEE3;box-shadow:0 6px 18px rgba(0,0,0,.35)}
 .nm{text-align:center;font-family:"Songti SC","STSong",serif;font-size:24px;font-weight:900;letter-spacing:.08em}
 .en{text-align:center;font:600 10px/1.6 ui-monospace,Menlo,monospace;letter-spacing:.16em;color:#8C8473;text-transform:uppercase}
 .work{text-align:center;font-size:12px;color:#B5AD9C;margin:6px 0 10px;min-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -77,7 +77,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid #2E2A22;color:#8C84
 <div class="top"><span>WRITING-COACH · MASTERS HALL</span><a href="./">← 返回首页</a></div>
 
 <h1>大师<em>展厅</em></h1>
-<p class="lead">14 位写作大师，各自带着一本讲写作的代表作。先认出你的稿子是哪一类，再请这一类对口的 3 位来挑问题。请的是他们的方法，不是本人：不模仿口吻，不按他们的文风改你的稿子，每条主张都写明出处。</p>
+<p class="lead">14 位写作大师，各自带着一本讲写作的代表作。先认出文章是哪一类，再请这一类对口的 3 位：选题、框架、成稿、体检、打磨，每一步都用得上。请的是他们的方法，不模仿口吻，每条主张都写明出处。</p>
 <div class="nums"><div><b>14</b><span>位大师 · 中文 9 外文 5</span></div><div><b>9</b><span>套方法</span></div><div><b>6</b><span>种练法</span></div><div><b>10</b><span>种文体路由</span></div></div>
 
 <h2>按文体请人</h2>
@@ -87,11 +87,11 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid #2E2A22;color:#8C84
 <div class="deck" id="deck"></div>
 
 <h2>方法库：换谁讲都一样</h2>
-<p class="sub">和作者无关的通用框架单独成库。体检时按文体选用，引导写时由你挑。</p>
+<p class="sub">和作者无关的通用框架单独成库。搭框架时定结构，成稿时当写法，体检时逐项检查。</p>
 <div class="tiles" id="methods"></div>
 
 <h2>练法库：下一步练什么</h2>
-<p class="sub">不打分。引导写时你卡住了，或者体检做完，针对最弱的那一关推荐一个。</p>
+<p class="sub">不打分。写不出来的时候，或者体检做完，针对最弱的那一关推荐一个。</p>
 <div class="tiles" id="drills"></div>
 
 <h2>入选规矩</h2>
@@ -100,8 +100,8 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid #2E2A22;color:#8C84
 <div><b>方法不是大师</b>：金字塔原理、SCQA、SUCCESs 这类换谁讲都一样的框架，放进方法库。</div>
 <div><b>不乱请神</b>：每篇最多 3 位，按文体路由；你点名谁就请谁，但会提醒他更适合哪类稿子。</div>
 <div><b>可溯源</b>：卡上只放能回原书核对的主张，用自己的话转述，核到篇名或章节才算“已核”。</div>
-<div><b>不用真人肖像</b>：卡面是印章式徽记，不画像、不仿照片。</div>
-<div><b>不替你想</b>：大师只提问、只挑问题。要成稿时只用你给的料，不套大师的腔调，写出来还是你的样子。</div>
+<div><b>插画不是照片</b>：卡面为示意插画，统一风格，不仿照片。</div>
+<div><b>用在全流程</b>：选题时帮你想透，成稿时当写作守则，体检时挑问题，打磨时给改法。</div>
 </div>
 
 <footer>属性条表示这位大师的主张主要覆盖哪几关，是展示用的，不是给大师打分。卡片内容由 masters/*.md 自动生成，以仓库为准。书目与核对状态见 <a href="https://github.com/laomao-ai/writing-coach-skill/blob/main/books/SOURCES.md">books/SOURCES.md</a>。MIT 协议开源 · <a href="https://github.com/laomao-ai/writing-coach-skill">GitHub</a></footer>
@@ -137,7 +137,7 @@ function ul(a,t){return"<"+(t||"ul")+">"+a.map(function(x){return"<li>"+esc(x)+"
 $("#deck").innerHTML=MASTERS.map(function(m,i){var c=ERA[m.era]||"#C9A45C",glob=m.k==="yuguangzhong";
 return'<button type="button" class="card" data-k="'+m.k+'" style="--c:'+c+'" aria-label="'+esc(m.n)+'，'+esc(m.work)+'，点击翻面"><div class="in">'+
 '<div class="face front"><div class="hd"><span>No.'+String(i+1).padStart(2,"0")+'</span><span class="era">'+esc(m.era)+'</span></div>'+(glob?'<span class="glob">全局检查</span>':'')+
-'<div class="seal">'+ring(c,(m.en+" · "+m.en+" · ").toUpperCase())+'<span>'+esc(m.seal)+'</span></div>'+
+'<div class="seal">'+ring(c,(m.en+" · "+m.en+" · ").toUpperCase())+'<img src="img/'+m.k+'.svg" alt="'+esc(m.n)+'插画" loading="lazy"></div>'+
 '<div class="nm">'+esc(m.n)+'</div><div class="en">'+esc(m.en)+'</div><div class="work">'+esc(m.work)+'</div>'+
 '<div style="text-align:center"><span class="skill">'+esc(m.skill)+'</span></div><div class="stats">'+bars(m.stats)+'</div></div>'+
 '<div class="face back"><h3>'+esc(m.t)+'</h3><p class="src">'+esc(m.src)+'</p><h4>核心主张</h4>'+ul(m.core.slice(0,3))+'<h4>会问你的问题</h4>'+ul(m.q,"ol")+'<h4>不适用 / 局限</h4>'+ul(m.lim)+'<div class="ck">适用文体：'+esc(m.genre)+'<br>核对状态：'+esc(m.st)+'</div></div>'+
