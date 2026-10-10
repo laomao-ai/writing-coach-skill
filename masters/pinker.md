@@ -1,8 +1,17 @@
 # 史蒂芬·平克 · 《风格感觉》
-来源：The Sense of Style（Steven Pinker，2014）；中文版：待补
+来源：The Sense of Style（Steven Pinker，2014）；中文版：《风格感觉：21 世纪写作指南》，王烁、王佩译，机械工业出版社 2018
 主管关：语言 · 读者
 适用文体：干货教程、商业职场、科技科普
 用在哪一步：成稿、体检
+
+## 金句（原文，出处已核）
+> The guiding metaphor of classic style is seeing the world.  
+> 古典风格的核心隐喻，是带读者看世界。  
+> ——The Sense of Style · 第 2 章，自译
+
+> The main cause of incomprehensible prose is the difficulty of imagining what it's like for someone else not to know something that you know.  
+> 文章难懂，主要是因为作者很难想象：别人不知道你知道的东西，是什么感觉。  
+> ——The Sense of Style · 第 3 章，自译
 
 ## 核心主张（自述转述，非原文摘录）
 - “古典风格”：把写作当作带读者看一样东西，作者和读者是平等的，目标是让对方看见。
@@ -76,6 +85,6 @@
 
 **最适合的步骤**：成稿（古典风格、已知新知）、体检（软塌塌清单、知识的诅咒、连贯之弧）。
 
-**使用局限**：以英语为例，第 4 章句法树、第 6 章用法争议多数不适用中文；中文语序问题以中文规范和余光中卡为准。中文版译名与出版社本次未核（现有卡“待补”仍成立）。
+**使用局限**：以英语为例，第 4 章句法树、第 6 章用法争议多数不适用中文；中文语序问题以中文规范和余光中卡为准。
 
 **调研来源**：Harvard Gazette https://news.harvard.edu/gazette/story/2012/11/exorcising-the-curse-of-knowledge ；章节书评 https://lexification.medium.com/28-59cc90ad1897 ；清单 https://www.lovethesat.com/sense-style-thinking-persons-guide-writing-21st-century-steven-pinker ；Scientific American 访谈 https://www.scientificamerican.com/article/steven-pinker-s-sense-of-style ；读书笔记 https://book.douban.com/people/ls8215/annotation/25846315/?start=10 ；https://medialeng.wordpress.com/2022/12/29/self-study-steven-pinker/

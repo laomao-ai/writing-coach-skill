@@ -18,6 +18,11 @@
 
 每一步先认出文章属于哪一类，再请这一类对口的大师和方法：写观点请胡适、鲁迅，写随笔请汪曾祺、朱光潜，写教程请津瑟、叶圣陶。14 位大师、9 套方法，每条主张都写明出处，请的是方法，不模仿口吻。
 
+> 写完后至少看两遍，竭力将可有可无的字，句，段删去，毫不可惜。
+> ——鲁迅《答北斗杂志社问》
+
+每张大师卡开头收一两句金句，逐字对过原文；体检时大师点评也会引上一句。
+
 ## 体检：能不能发，一眼看懂
 
 <img src="docs/img/report.svg" alt="体检报告示例：结论改完再发，短板证据" width="100%">
@@ -56,13 +61,14 @@ docs/         展示页与大师展厅
 <details>
 <summary><b>致谢与来源</b></summary>
 
-方法来自《叶圣陶谈写作》《文心雕龙》《写作法宝》《风格感觉》《金字塔原理》等，书目与核对状态见 [library/sources.md](library/sources.md)，全部为自述转述。开源项目只借思路、不搬原文（均为 MIT）：[Humanizer-zh](https://github.com/op7418/Humanizer-zh)、[lieflat-less-ai-tone](https://github.com/larashero3-dotcom/lieflat-less-ai-tone)、[writing-agent](https://github.com/dongbeixiaohuo/writing-agent)、[writing-dna-skill](https://github.com/larashero3-dotcom/writing-dna-skill)、[shuorenhua](https://github.com/MrGeDiao/shuorenhua)。大师插画为示意创作，不是照片。
+方法来自《叶圣陶谈写作》《文心雕龙》《写作法宝》《风格感觉》《金字塔原理》等，书目与核对状态见 [library/sources.md](library/sources.md)。主张为自述转述，金句为原文并注明出处。开源项目只借思路、不搬原文（均为 MIT）：[Humanizer-zh](https://github.com/op7418/Humanizer-zh)、[lieflat-less-ai-tone](https://github.com/larashero3-dotcom/lieflat-less-ai-tone)、[writing-agent](https://github.com/dongbeixiaohuo/writing-agent)、[writing-dna-skill](https://github.com/larashero3-dotcom/writing-dna-skill)、[shuorenhua](https://github.com/MrGeDiao/shuorenhua)。大师插画为示意创作，不是照片。
 </details>
 
 <details>
 <summary><b>版本</b></summary>
 
 - v4.1：体检改为“结论 + 短板 + 先改”，分数只进评分块；新增去 AI 腔（六类信号）；选题加“逐层穿透”；文件合并进 library/；新增完整样例。
+- v4.2：14 位大师各收一两句金句，全部对过原文；补齐外文书中文版信息，清掉卡片里的待核项。
 - v4：定位改为“把全球顶尖的写作大师，请进你的 AI”；五步全流程；风格档案；评分块；展示页加大师插画。
 - v3：14 位大师按文体路由、9 套方法、6 种练法、大师展厅。
 - v2：五关评分、大师会诊、评测、展示页。

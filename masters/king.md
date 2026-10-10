@@ -1,8 +1,17 @@
 # 斯蒂芬·金 · 《写作这回事》
-来源：On Writing（Stephen King，2000）；中文版：待补
+来源：On Writing（Stephen King，2000）；中文版：《写作这回事：创作生涯回忆录》，张坤译，人民文学出版社 2019（初版上海译文 2009）
 主管关：语言
 适用文体：经验复盘、故事人物
 用在哪一步：成稿、打磨
+
+## 金句（原文，出处已核）
+> I believe the road to hell is paved with adverbs.  
+> 通往地狱的路是副词铺就的。  
+> ——On Writing · Toolbox，张坤译
+
+> Write with the door closed, rewrite with the door open.  
+> 关门写作，开门改稿。  
+> ——On Writing · C.V.，张坤译
 
 ## 核心主张（自述转述，非原文摘录）
 - 多读多写，没有捷径。
@@ -23,7 +32,7 @@
 - 写的是小说经验；“删 10%”是经验法则不是硬指标，作者文风偏繁也可以是风格。
 
 ## 核对状态
-副词、二稿减 10%、关门写开门改：书中广为引用的建议，已核。页码：待核。
+副词、二稿减 10%、关门写开门改：已核：副词见 Toolbox，二稿减一成见 On Writing 部分，关门写见 C.V. 部分。
 
 
 ## 绝技：改稿时怎么用
@@ -65,7 +74,7 @@
 - 示例 · 前：“他步入办公场所。” → 后：“他走进办公室。”
 
 ### 对话标签用“说”，别给“说”加副词
-- 出处：前半 Toolbox 谈副词时涉及对话归属（待核）
+- 出处：前半 Toolbox 谈副词时涉及对话归属（已核）
 - 原理：金认为对话归属最好只用“说”，配上副词（“他坚定地说”）往往说明对话本身没写到位。
 - 改稿：故事稿里搜“地说/地问/地回答”，删副词；如果删后情绪丢了，就改对话内容本身让情绪显现。
 - 体检问：删掉“地”字修饰，这句对话本身能传达情绪吗？
@@ -73,6 +82,6 @@
 
 **最适合的步骤**：成稿（关门写、理想读者）、打磨（入抽屉、删心头好、−10%）。
 
-**使用局限**：经验来自小说；“六周”是长篇建议，短稿按比例缩短；“−10%”是经验法则不是硬指标。删副词在中文里对应“地”字结构和程度词，别机械清零。中文版译者/出版社仍待补。
+**使用局限**：经验来自小说；“六周”是长篇建议，短稿按比例缩短；“−10%”是经验法则不是硬指标。删副词在中文里对应“地”字结构和程度词，别机械清零。
 
 **调研来源**：https://www.nateliason.com/notes/writing-stephen-king ；https://www.ricklindquist.com/notes/notes-and-takeaways-from-on-writing ；https://signalvnoise.com/posts/322-excerpts-from-stephen-kings-on-writing ；https://udharadesilva.com/book-notes/writing-stephen-king/ ；https://www.martijnvanzwieten.com/books/on-writing/

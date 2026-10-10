@@ -94,6 +94,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--mut);fon
 @media(max-width:900px){.loop{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.hero,.stage,.rep,.two{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}h1{font-size:38px}nav .lk{display:none}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}.wall{grid-template-columns:repeat(3,1fr)}.stats{gap:18px}}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:4px 0 26px}.qs figure{margin:0;padding:14px 16px;background:var(--soft);border-left:3px solid var(--acc);border-radius:8px}.qs blockquote{margin:0;font-family:"Songti SC","STSong","Noto Serif SC",serif;font-size:15.5px;line-height:1.75}.qs figcaption{margin-top:6px;font-size:12px;opacity:.6}@media(max-width:760px){.qs{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -147,7 +148,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--mut);fon
 
 <section id="masters"><div class="wrap">
 <h2 class="serif">大师团：请的是方法</h2>
-<p class="sub">14 位写作大师，各自带着一本讲写作的代表作。按步骤筛一筛，看每一步请谁。卡上的主张都写明出处，不模仿口吻。</p>
+<p class="sub">14 位写作大师，各自带着一本讲写作的代表作。按步骤筛一筛，看每一步请谁。主张写明出处，金句逐字对过原文，不模仿口吻。</p>
+<div class="qs">
+<figure><blockquote>写完后至少看两遍，竭力将可有可无的字，句，段删去，毫不可惜。</blockquote><figcaption>鲁迅 · 《答北斗杂志社问》</figcaption></figure>
+<figure><blockquote>语言不能像桔子皮一样，可以剥下来，扔掉。</blockquote><figcaption>汪曾祺 · 《中国文学的语言问题》</figcaption></figure>
+<figure><blockquote>关门写作，开门改稿。</blockquote><figcaption>斯蒂芬·金 · 《写作这回事》</figcaption></figure>
+</div>
 <div class="f" id="f"></div>
 <div class="grid" id="grid"></div>
 <div class="more2"><a class="btn" href="masters.html">进大师展厅：按文体请人、方法库、练法库 →</a></div>
@@ -177,7 +183,7 @@ git clone https://github.com/laomao-ai/writing-coach-skill ~/.claude/skills/writ
 </div>
 </div></section>
 
-<footer><div class="wrap">MIT 协议开源 · <a href="https://github.com/laomao-ai/writing-coach-skill">GitHub</a> · 大师卡与方法卡为自述转述，书目与核对状态见 <a href="https://github.com/laomao-ai/writing-coach-skill/blob/main/library/sources.md">sources.md</a> · 大师插画为示意创作，不是照片。</div></footer>
+<footer><div class="wrap">MIT 协议开源 · <a href="https://github.com/laomao-ai/writing-coach-skill">GitHub</a> · 主张为自述转述，金句为原文并注明出处，书目与核对状态见 <a href="https://github.com/laomao-ai/writing-coach-skill/blob/main/library/sources.md">sources.md</a> · 大师插画为示意创作，不是照片。</div></footer>
 
 <script>
 var M=[{"k": "yeshengtao", "n": "叶圣陶", "work": "《叶圣陶谈写作》", "skill": "写话即说话", "stage": "成稿、打磨"}, {"k": "luxun", "n": "鲁迅", "work": "《答北斗杂志社问》", "skill": "删去可有可无", "stage": "体检、打磨"}, {"k": "hushi", "n": "胡适", "work": "《文学改良刍议》", "skill": "言之有物", "stage": "选题立意、体检"}, {"k": "wangzengqi", "n": "汪曾祺", "work": "《汪曾祺的写作课》", "skill": "语言即内容", "stage": "成稿、打磨"}, {"k": "laoshe", "n": "老舍", "work": "《出口成章》", "skill": "普通字写不普通的意思", "stage": "成稿、打磨"}, {"k": "xiamianzun", "n": "夏丏尊", "work": "《文心》《文章作法》", "skill": "先分文体再取舍", "stage": "标题框架、成稿"}, {"k": "zhuguangqian", "n": "朱光潜", "work": "《咬文嚼字》", "skill": "咬文嚼字", "stage": "选题立意、打磨"}, {"k": "liuxie", "n": "刘勰", "work": "《文心雕龙》", "skill": "为情造文", "stage": "选题立意、标题框架"}, {"k": "yuguangzhong", "n": "余光中", "work": "《怎样改进英式中文——论中文的常态与变态》", "skill": "治欧化中文", "stage": "打磨"}, {"k": "orwell", "n": "乔治·奥威尔", "work": "《政治与英语》（文章）", "skill": "写作六条", "stage": "体检、打磨"}, {"k": "zinsser", "n": "威廉·津瑟", "work": "《写作法宝》（On Writing Well）", "skill": "清除杂物", "stage": "标题框架、成稿、打磨"}, {"k": "pinker", "n": "史蒂芬·平克", "work": "《风格感觉》", "skill": "知识的诅咒", "stage": "成稿、体检"}, {"k": "king", "n": "斯蒂芬·金", "work": "《写作这回事》", "skill": "删副词", "stage": "成稿、打磨"}, {"k": "mckee", "n": "罗伯特·麦基", "work": "《故事》", "skill": "期待与结果的落差", "stage": "标题框架、成稿"}];

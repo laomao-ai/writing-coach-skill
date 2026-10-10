@@ -4,6 +4,15 @@
 适用文体：通用、观点评论、测评体验
 用在哪一步：体检、打磨
 
+## 金句（原文，出处已核）
+> Never use a long word where a short one will do.  
+> 短词够用，就别用长词。  
+> ——Politics and the English Language（1946），自译
+
+> If it is possible to cut a word out, always cut it out.  
+> 能删的字，一定删掉。  
+> ——同上，自译
+
 ## 核心主张（自述转述，非原文摘录）
 - 不用见惯了的比喻。
 - 能用短词就不用长词；能删的词就删。

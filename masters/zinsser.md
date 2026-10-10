@@ -1,8 +1,17 @@
 # 威廉·津瑟 · 《写作法宝》（On Writing Well）
-来源：On Writing Well（William Zinsser，1976 起多次修订）；中文版译名不一：待补
+来源：On Writing Well（William Zinsser，1976 起多次修订）；中文版：《写作法宝：非虚构写作指南（30 周年纪念版）》，朱源译，中国人民大学出版社 2013
 主管关：语言 · 立意
 适用文体：通用、干货教程、商业职场、科技科普、测评体验、经验复盘
 用在哪一步：标题框架、成稿、打磨
+
+## 金句（原文，出处已核）
+> Clutter is the disease of American writing.  
+> 杂物，是美国写作的通病。  
+> ——On Writing Well · Simplicity，自译
+
+> The secret of good writing is to strip every sentence to its cleanest components.  
+> 好文章的秘诀，是把每个句子剥到最干净的成分。  
+> ——On Writing Well · Simplicity，自译
 
 ## 核心主张（自述转述，非原文摘录）
 - 清除杂物：每个不起作用的词、重复的意思、空洞的修饰都要删。
@@ -61,7 +70,7 @@
 - 前开头：“随着科技的发展，越来越多的人开始关注睡眠。” → 后：“我戴了三个月睡眠手环，发现自己每晚其实只睡了 5 小时 12 分。”
 
 ### 读者一次只能处理一个想法：长句拆短
-- 出处：通行读书笔记引自本书（据 booknotes 摘录），章节待核（待核）
+- 出处：A Writer's Decisions 一章（已核）
 - 原理：读者线性地、一次处理一个想法；许多麻烦来自想让一句话做太多事。别怕把一个长句拆成两三个短句。
 - 改稿：一句话里有两个以上“新信息”就拆；拆完检查每句只承担一个判断。
 - 体检问：这句话里，读者要同时记住几件事？

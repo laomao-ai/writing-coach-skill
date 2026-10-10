@@ -1,8 +1,17 @@
 # 罗伯特·麦基 · 《故事》
-来源：Story（Robert McKee，1997）；中文版：待补
+来源：Story（Robert McKee，1997）；中文版：《故事：材质、结构、风格和银幕剧作的原理》，周铁东译，天津人民出版社 2014（初版中国电影出版社 2001）
 主管关：结构 · 读者
 适用文体：故事人物
 用在哪一步：标题框架、成稿
+
+## 金句（原文，出处已核）
+> Story is about principles, not rules.  
+> 故事讲的是原理，不是规则。  
+> ——Story · Introduction，自译
+
+> Anxious, inexperienced writers obey rules. Rebellious, unschooled writers break rules. Artists master the form.  
+> 焦虑的新手守规则，叛逆的外行破规则，艺术家驾驭形式。  
+> ——Story · Introduction，自译
 
 ## 核心主张（自述转述，非原文摘录）
 - 故事由冲突推动：人物想要什么，什么在阻止他。
@@ -23,13 +32,13 @@
 - 本书面向剧本；用在观点文、干货文时只借“冲突”和“控制性思想”，不要求有人物弧光。
 
 ## 核对状态
-冲突、期待与结果的落差、控制性思想：书中核心概念，已核。章节页码：待核。
+冲突、期待与结果的落差、控制性思想：书中核心概念，已核（控制性思想见第 6 章 Structure and Meaning）。
 
 
 ## 绝技：改稿时怎么用
 以下为自述转述，示例为教学用自编例句，不是原文。
 
-### *已核，archive.org 扫描版目录）：Part 2 The Elements of Story；Part 3 The Principles of Story Design：7 The Substance of Story / 8 The Inciting Incident / 9 Act Design / 10 Scene Design / 11 Scene Analysis / 12 Composition / 13 Crisis, Climax, Resolution；Part 4 The Writer at Work：The Principle of Antagonism / Exposition / Problems and Solutions / Character / The Text（Part 4 章号 OCR 版本不一，待核）。
+### *已核，archive.org 扫描版目录）：Part 2 The Elements of Story；Part 3 The Principles of Story Design：7 The Substance of Story / 8 The Inciting Incident / 9 Act Design / 10 Scene Design / 11 Scene Analysis / 12 Composition / 13 Crisis, Climax, Resolution；Part 4 The Writer at Work：14 The Principle of Antagonism / 15 Exposition / 16 Problems and Solutions / 17 Character / 18 The Text / 19 A Writer's Method。
 
 
 ### 每个场景都要“转”：价值从正到负或从负到正
@@ -69,6 +78,6 @@
 
 **最适合的步骤**：标题框架（激励事件位置、控制性思想、每节价值转向）；成稿（鸿沟、两难选择）。
 
-**使用局限**：面向剧本和虚构叙事；用于观点文、干货文时只借“控制性思想”和“开头尽早出事”，不要求每段都有冲突转折。非虚构稿中不得为制造鸿沟虚构或夸大情节——落差必须真实存在。中文版信息仍待补。
+**使用局限**：面向剧本和虚构叙事；用于观点文、干货文时只借“控制性思想”和“开头尽早出事”，不要求每段都有冲突转折。非虚构稿中不得为制造鸿沟虚构或夸大情节——落差必须真实存在。
 
 **调研来源**：麦基官网转载 https://mckeestory.com/do-your-scenes-turn ；目录与原书片段 https://archive.org/stream/RobertMcKeeStorypdf/Robert%20McKee%20-%20Story%20(pdf)_djvu.txt ；鸿沟 https://emshort.blog/2019/02/05/story-robert-mckee 、 https://sive.rs/book/Story ；控制性思想 https://quizlet.com/331556604/story-by-robert-mckee-flash-cards/
