@@ -60,7 +60,7 @@ h2{font-size:32px;margin:0 0 8px;font-weight:900}
 .doc p.hl{background:#FFF4DC;border-left-color:#D9A21B}
 .total{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}.total b{font-size:40px;line-height:1}.total span{color:var(--mut)}
 .bars{display:grid;gap:8px;margin-bottom:18px}
-.bar{display:grid;grid-template-columns:36px 1fr 20px;align-items:center;gap:10px;font-size:13px}
+.bar{display:grid;grid-template-columns:36px 1fr 24px;align-items:center;gap:10px;font-size:13px}
 .bar i{height:8px;background:#EEE8DC;border-radius:8px;overflow:hidden}.bar i s{display:block;height:100%;background:var(--acc2);border-radius:8px}
 .iss{list-style:none;margin:0;padding:0}
 .iss li{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:13.5px;cursor:pointer;transition:.15s}
@@ -82,27 +82,49 @@ h2{font-size:32px;margin:0 0 8px;font-weight:900}
 pre{margin:0;background:#1E1C18;color:#EDE6D8;border-radius:12px;padding:16px;font:13px/1.7 ui-monospace,Menlo,monospace;overflow:auto;white-space:pre-wrap}
 .box p{margin:0 0 12px;font-size:14.5px}
 footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--mut);font-size:13px}
+.loop{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;counter-reset:l}
+.ly{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;position:relative}
+.ly small{font:600 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;color:var(--mut)}
+.ly b{display:block;font-size:22px;margin:8px 0 6px}.ly p{margin:0 0 10px;font-size:13.5px;color:var(--mut)}
+.ly em{font-style:normal;font-size:12px;padding:3px 8px;border-radius:20px;background:#EEE8DC}
+.ly.on{border-color:var(--acc);box-shadow:0 0 0 2px rgba(0,0,0,.02)}.ly.on em{background:var(--acc);color:#fff}
+.engine{margin-top:12px;padding:14px 18px;border:1px dashed var(--acc);border-radius:14px;font-size:14px;text-align:center}
+.verdict{display:grid;gap:6px;margin-bottom:16px;font-size:14.5px}.verdict b{font-size:22px}
+.verdict div{display:grid;grid-template-columns:44px 1fr;gap:8px}.verdict span{color:var(--mut)}
+@media(max-width:900px){.loop{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.hero,.stage,.rep,.two{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}h1{font-size:38px}nav .lk{display:none}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}.wall{grid-template-columns:repeat(3,1fr)}.stats{gap:18px}}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>writing-coach<span>写作教练</span></b><div class="lk"><a href="#flow">五步</a><a href="#report">体检</a><a href="#masters">大师团</a><a href="#install">安装</a><a href="masters.html">大师展厅</a><a href="https://github.com/laomao-ai/writing-coach-skill">GitHub</a></div></div></nav>
+<nav><div class="wrap"><b>writing-coach<span>写作教练</span></b><div class="lk"><a href="#loop">全景</a><a href="#flow">五步</a><a href="#report">体检</a><a href="#masters">大师团</a><a href="#install">安装</a><a href="masters.html">大师展厅</a><a href="https://github.com/laomao-ai/writing-coach-skill">GitHub</a></div></div></nav>
 
 <header><div class="wrap hero">
 <div>
 <div class="eyebrow">艾元猫工作室 · 开源系列 02</div>
 <h1 class="serif">把全球顶尖的写作大师，<br><em>请进你的 AI。</em></h1>
-<p class="lead">选题、标题、框架、成稿、打磨，每一步都有大师的方法；五道关打分，告诉你哪里还能更好。从一个想法写到成稿，或者只用其中一步，接进你自己的 Agent。</p>
-<div class="stats"><div><b>14</b><span>位写作大师</span></div><div><b>9</b><span>套方法</span></div><div><b>5</b><span>步全流程</span></div><div><b>20</b><span>分五关体检</span></div></div>
+<p class="lead">选题、标题、框架、成稿、打磨，每一步都有大师的方法；写完过五关，告诉你能不能发、短板在哪、先改什么。从一个想法写到成稿，或者只用其中一步，接进你自己的 Agent。</p>
+<div class="stats"><div><b>14</b><span>位写作大师</span></div><div><b>9</b><span>套方法</span></div><div><b>5</b><span>步全流程</span></div><div><b>3</b><span>档结论 + 短板</span></div></div>
 <div class="btns"><a class="btn pri" href="#flow">看它怎么写</a><a class="btn" href="https://github.com/laomao-ai/writing-coach-skill">GitHub 仓库</a></div>
 </div>
 <div class="wall" id="wall"></div>
 </div></header>
 
+<section id="loop"><div class="wrap">
+<h2 class="serif">写好一篇公众号，要过四层</h2>
+<p class="sub">输出的核心是表达成功，不是简单重复；表达的核心是逻辑方法，不是形式套路；逻辑的核心是知识理解，不是背模板；理解的核心是练习反馈，不是止于读过。</p>
+<div class="loop">
+<div class="ly"><small>LAYER 1 · 输出</small><b>发得出</b><p>排版、发布</p><em>wechat-gzh-publish · 已开源</em></div>
+<div class="ly on"><small>LAYER 2 · 表达</small><b>写得好</b><p>成稿、打磨、去 AI 腔</p><em>写作教练 ③ ④ ⑤</em></div>
+<div class="ly on"><small>LAYER 3 · 逻辑</small><b>想得清</b><p>选题、立意、结构</p><em>写作教练 ① ②</em></div>
+<div class="ly"><small>LAYER 4 · 理解</small><b>学得透</b><p>积累、卡片、知识管理</p><em>后续</em></div>
+</div>
+<div class="engine">写作教练还是推着这个环转的那只手：<b>体检给出短板 → 练法对准短板练 → 下一篇再体检</b>。反馈越快，写得越好。</div>
+</div></section>
+
 <section id="flow"><div class="wrap">
 <h2 class="serif">五步，从哪一步进来都行</h2>
-<p class="sub">每一步都会先认出文章属于哪一类，再请这一类对口的大师和方法。下面用同一个题目走一遍：一篇介绍六套公众号排版主题的文章。</p>
+<p class="sub">每一步都会先认出文章属于哪一类，再请这一类对口的大师和方法。下面用一篇真实的文章走一遍：作者做完六套排版主题，想写一篇。这篇文章已经用它写完、发出。</p>
 <div class="steps" id="steps"></div>
 <div class="stage">
 <div class="box"><h4>你说</h4><div class="say" id="say"></div><h4>请到</h4><div class="who" id="who"></div></div>
@@ -111,12 +133,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--mut);fon
 </div></section>
 
 <section id="report"><div class="wrap">
-<h2 class="serif">五关体检：每一分都有依据</h2>
-<p class="sub">立意、结构、证据、语言、读者，每关 0–4 分。下面是一篇已发布的真实公众号文章的体检结果（作者同意用于展示），点右边任一条，左边会高亮对应的原文。</p>
+<h2 class="serif">五关体检：先给结论，再说短板</h2>
+<p class="sub">立意、结构、证据、语言、读者，五关过一遍，只告诉你三件事：能不能发、短板在哪、先改什么。下面是一篇已发布的真实文章的体检结果（作者同意展示），点右边任一条，左边会高亮对应的原文。</p>
 <div class="rep">
 <div class="box doc" id="doc"></div>
 <div class="box">
-<div class="total"><b>19</b><span>/ 20 · 文体：干货教程</span></div>
+<div class="verdict"><b>🟡 改完再发</b><div><span>短板</span>证据 · 第 04 节「公众号常用的一组参数」没写来源</div><div><span>先改</span>补一句来源，或写明是经验值</div><div><span>文体</span>干货教程（请：津瑟、叶圣陶、平克）</div></div>
 <div class="bars" id="bars"></div>
 <ul class="iss" id="iss"></ul>
 </div>
@@ -141,33 +163,35 @@ git clone https://github.com/laomao-ai/writing-coach-skill ~/.claude/skills/writ
 
 # 然后直接说：
 帮我想个选题 / 起几个标题搭个框架
-把这几张卡片写成文章 / 帮我体检打个分
-请奥威尔和金看看 / 润色，保留我的风格</pre></div>
-<div class="box"><h4>评分块（体检末尾，可机读）</h4>
-<pre>{"genre": "干货教程",
+把这几张卡片写成文章 / 帮我体检，能发吗
+请奥威尔和金看看 / 去 AI 味，保留我的风格</pre></div>
+<div class="box"><h4>评分块（给 Agent 读，人看结论就够）</h4>
+<pre>{"verdict": "改完再发", "genre": "干货教程",
  "scores": {"立意": 4, "结构": 4, "证据": 3,
             "语言": 4, "读者": 4},
- "total": 19, "p0": 0, "p1": 3, "p2": 4,
- "weakest": "证据", "drill": "刻意练习"}</pre>
+ "total": 19, "p0": 0, "p1": 2, "ai_tone": 0,
+ "weakest": "证据",
+ "fix_first": "第 04 节参数补来源",
+ "drill": "刻意练习"}</pre>
 <p style="margin-top:14px">写完交给同系列的 <a href="https://laomao-ai.github.io/wechat-gzh-publish/"><b>wechat-gzh-publish</b></a> 排版发布。</p></div>
 </div>
 </div></section>
 
-<footer><div class="wrap">MIT 协议开源 · <a href="https://github.com/laomao-ai/writing-coach-skill">GitHub</a> · 大师卡与方法卡为自述转述，书目与核对状态见 <a href="https://github.com/laomao-ai/writing-coach-skill/blob/main/books/SOURCES.md">SOURCES.md</a> · 大师插画为示意创作，不是照片。</div></footer>
+<footer><div class="wrap">MIT 协议开源 · <a href="https://github.com/laomao-ai/writing-coach-skill">GitHub</a> · 大师卡与方法卡为自述转述，书目与核对状态见 <a href="https://github.com/laomao-ai/writing-coach-skill/blob/main/library/sources.md">sources.md</a> · 大师插画为示意创作，不是照片。</div></footer>
 
 <script>
 var M=[{"k": "yeshengtao", "n": "叶圣陶", "work": "《叶圣陶谈写作》", "skill": "写话即说话", "stage": "成稿、打磨"}, {"k": "luxun", "n": "鲁迅", "work": "《答北斗杂志社问》", "skill": "删去可有可无", "stage": "体检、打磨"}, {"k": "hushi", "n": "胡适", "work": "《文学改良刍议》", "skill": "言之有物", "stage": "选题立意、体检"}, {"k": "wangzengqi", "n": "汪曾祺", "work": "《汪曾祺的写作课》", "skill": "语言即内容", "stage": "成稿、打磨"}, {"k": "laoshe", "n": "老舍", "work": "《出口成章》", "skill": "普通字写不普通的意思", "stage": "成稿、打磨"}, {"k": "xiamianzun", "n": "夏丏尊", "work": "《文心》《文章作法》", "skill": "先分文体再取舍", "stage": "标题框架、成稿"}, {"k": "zhuguangqian", "n": "朱光潜", "work": "《咬文嚼字》", "skill": "咬文嚼字", "stage": "选题立意、打磨"}, {"k": "liuxie", "n": "刘勰", "work": "《文心雕龙》", "skill": "为情造文", "stage": "选题立意、标题框架"}, {"k": "yuguangzhong", "n": "余光中", "work": "《怎样改进英式中文——论中文的常态与变态》", "skill": "治欧化中文", "stage": "打磨"}, {"k": "orwell", "n": "乔治·奥威尔", "work": "《政治与英语》（文章）", "skill": "写作六条", "stage": "体检、打磨"}, {"k": "zinsser", "n": "威廉·津瑟", "work": "《写作法宝》（On Writing Well）", "skill": "清除杂物", "stage": "标题框架、成稿、打磨"}, {"k": "pinker", "n": "史蒂芬·平克", "work": "《风格感觉》", "skill": "知识的诅咒", "stage": "成稿、体检"}, {"k": "king", "n": "斯蒂芬·金", "work": "《写作这回事》", "skill": "删副词", "stage": "成稿、打磨"}, {"k": "mckee", "n": "罗伯特·麦基", "work": "《故事》", "skill": "期待与结果的落差", "stage": "标题框架、成稿"}];
 var STEPS=[
-{n:"01",k:"选题立意",d:"从方向到一句话立意",say:"最近做了六套公众号排版主题，想写一篇，帮我想想选题。",who:["zinsser","pinker"],mt:["费曼技巧"],
-out:'<p>三个角度：</p><ol><li><b>六个原创排版主题，各自适合写什么</b><br><span class="k">立意：排版按文章类型选，不按颜色选 · 读者：用 Markdown 写公众号的人 · 干货教程</span></li><li><b>为什么我们不直接打包开源主题</b><br><span class="k">立意：要分享出去的东西，得自己画 · 经验复盘</span></li><li><b>同一篇文章排六遍，能看出什么</b><br><span class="k">立意：版式服务内容 · 测评体验</span></li></ol><p><span class="tb">推荐 1</span>：读者最明确，正好回答上一篇后台问得最多的“能不能换个样子”。</p>'},
-{n:"02",k:"标题框架",d:"备选标题 + 一条主线",say:"就写第一个，起几个标题，搭个框架。",who:["zinsser","xiamianzun"],mt:["金字塔原理"],
-out:'<p>标题备选：</p><ul><li>六个原创排版主题，各自适合写什么（直给）</li><li>教程、随笔、评论，该用同一套排版吗？（问题）</li><li>别再只挑颜色了：六套主题按文章类型选（反差）</li></ul><p>提纲（小标题连起来就是主线）：</p><ol><li>为什么自己画 <span class="k">· 需要：上一篇用的开源项目名</span></li><li>按文章类型选，不按颜色选 <span class="k">· 一张对照表</span></li><li>每个系列配一篇样例</li><li>字号、行距、边距 <span class="k">· 参数表 + 基准来源</span></li><li>组件只用需要的</li><li>怎么用起来，结尾给下一步</li></ol>'},
-{n:"03",k:"成稿",d:"从任何起点写成全文",say:"按这个提纲写成全文，口吻跟我上一篇一样。",who:["yeshengtao","zinsser","pinker"],mt:["金字塔原理"],
-out:'<blockquote>上一篇发出后，后台问得最多的一句是：能不能换个样子？<br>能换。但我们不想只给一排颜色。教程、随笔、评论、实测，要的版式本来就不一样……</blockquote><p class="k">全文约 2400 字，按提纲六节写完。</p><p><b>待核实</b>：第 04 节“公众号常用的一组参数”的来源【待核实：平台默认值还是经验值】</p><p><b>自评</b>：立意 4 · 结构 4 · 证据 3 · 语言 4 · 读者 4</p>'},
-{n:"04",k:"体检",d:"五关打分，问题指回原文",say:"帮我体检一下，打个分。",who:["zinsser","yeshengtao","pinker"],mt:["金字塔原理","余光中 · 全局语言"],
-out:'<p><span class="tb">19 / 20</span>，基本不用改。标题的问题在第 02 节一张表里就答完了，后面每节都在推进。</p><ul><li><span class="tag p1">P1</span>第 04 节「公众号常用的一组参数」缺依据，补一句来源</li><li><span class="tag p1">P1</span>第 01 节提到开源项目，建议写出名字</li><li><span class="tag p2">P2</span>「头部IP」新读者看不懂，表里补半句</li></ul><p class="k">完整报告见下一节的交互示例。</p>'},
-{n:"05",k:"打磨",d:"轻 / 中 / 重，保留风格",say:"润色一下，保留我的风格，强度“中”。",who:["zinsser","yeshengtao","yuguangzhong"],mt:["威廉姆斯"],
-out:'<ul><li><b>第 01 节</b>：自己发文章用没有问题 → 自己发文章用，<b>没有问题；</b><br><span class="k">原句念的时候容易断错，只加停顿</span></li><li><b>第 03 节</b>：所以每个系列都配了一篇短样例 → 所以每篇样例的题材，都按这个系列最擅长的来选<br><span class="k">前面已说过两次，只留新信息</span></li><li><b>第 05 节</b>：所以主题实验室里有三种预览 → 主题实验室里有三种预览<br><span class="k">因果偏松，去掉“所以”</span></li></ul><p class="k">数字、表格、口头表达一个没动。</p>'}];
+{n:"01",k:"选题立意",d:"往下拆，拆到立意",say:"最近做了六套公众号排版主题，想写一篇。昨天已经介绍过主题，这篇要有更大的立意。",who:["hushi","liuxie"],mt:["逐层穿透"],
+out:'<p>第一轮给了“一键排版之后，拼的是什么”。作者说不够深，于是往下拆：</p><ul><li>输出的核心是表达成功，不是简单重复</li><li>表达的核心是逻辑方法，不是形式套路</li><li>逻辑的核心是知识理解，不是背模板</li><li>理解的核心是练习反馈，不是止于读过</li></ul><p><span class="tb">立意</span>：大家都从最显眼的“发出去”开始卷，拆到底是反馈。写作变好，靠的是更快的反馈。</p><p class="k">文体：观点评论 · 读者：用 AI 写公众号、越写越没底的人 · 还缺：一个亲历的例子</p>'},
+{n:"02",k:"标题框架",d:"标题 + 留出反方",say:"就按四层写，起几个标题，搭个框架。",who:["mckee","hushi"],mt:["哈佛论证写作"],
+out:'<p>标题备选：</p><ul><li><b>做完六套排版主题，我把写公众号拆到了底</b>（经历 + 悬念，推荐）</li><li>发得出、写得好、想得清、学得透（系列总题）</li><li>写作变好，靠的是更快的反馈（结论先行）</li></ul><p>提纲：</p><ol><li>钩子：自己起的样例题目，自己答不上来</li><li>发得出：排版的核心是让人读下去</li><li>往下拆：四句话、四层 <span class="k">· 一张表</span></li><li>落差：我们是倒着走的 <span class="k">· 需要亲历例子</span></li><li>反方：“AI 都能写了，还练什么？”</li><li>揭底：最底层是反馈</li></ol>'},
+{n:"03",k:"成稿",d:"照作者口吻写全文",say:"按提纲写成全文，口吻跟我前两篇一样。",who:["yeshengtao","zinsser","hushi"],mt:["场景卡 · 公众号"],
+out:'<blockquote>六套排版主题做完那天晚上，我把六篇样例从头翻了一遍。<br>翻到墨刊那篇，题目是我自己起的：一键排版之后，稀缺的是什么。那天晚上回头看，我发现自己答不上来……</blockquote><p class="k">约 1900 字，六节，用“我们”，短句，小节编号。</p><p><b>待补</b>：第 03 节一个亲历的例子（由作者本人补）</p><p><b>自评</b>：🟡 改完再发 · 短板：证据</p>'},
+{n:"04",k:"体检",d:"结论 + 短板 + 先改",say:"帮我体检一下，能发吗？",who:["hushi","luxun","orwell"],mt:["五关","去 AI 腔"],
+out:'<p><span class="tb">🟡 改完再发</span></p><p><b>短板</b>：证据 · 第 03 节「越往下，越难一键」只有判断，没有自己的例子<br><b>先改</b>：补一个亲历；第 06 节的健身比喻换成真实经历</p><ul><li><span class="tag p1">P1</span>按胡适“言之有物”：全文的支点没有例子撑着</li><li><span class="tag p2">P2</span>按奥威尔“不用见惯的比喻”：「好比健身」读者见过太多次</li><li><span class="tag p2">P2</span>按鲁迅“可有可无的删去”：「这不仅是……更是……」</li><li><span class="tag ok">好</span>四句排比 + 四层表，一眼记住骨架</li></ul>'},
+{n:"05",k:"打磨",d:"去 AI 腔，改成你的",say:"去一下 AI 味，保留我的风格，强度“中”。",who:["luxun","orwell","yuguangzhong"],mt:["去 AI 腔"],
+out:'<ul><li><b>见惯的比喻 → 亲身经历</b><br>好比健身，动作对不对，得有人看着。<br>→ 昨天那篇主题介绍，我拿它体检了一遍：短板是证据，第 04 节那组“常用参数”没写来源。我自己写的时候一点没察觉。</li><li><b>假对比</b>：这不仅是工具的变化，更是写作重心的转移 → 删</li><li><b>段首空评论</b>：值得注意的是，这两层最显眼 → 这两层最显眼</li></ul><p class="k">口吻、数字、作者卡片原话一处没动。</p><p><b>再迭代两轮</b>：麦基、平克、朱光潜、叶圣陶、津瑟交叉点评，校准立意和读者 → <span class="tb">✅ 可以发</span>。<a href="https://github.com/laomao-ai/writing-coach-skill/blob/main/examples/walkthrough.md">看完整过程和最终稿 →</a></p>'}];
 var BY={};M.forEach(function(m){BY[m.k]=m});
 function $(s){return document.querySelector(s)}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -182,7 +206,7 @@ $("#out").innerHTML=s.out}
 var DOC=[["ttl","六个原创排版主题，各自适合写什么"],["","上一篇发出后，问得最多的一个问题是：能不能换个样子？"],["","能换，但我们不想只给一排颜色让你挑。教程、随笔、评论、实测，需要的版式本来就不一样。"],["h","01　先说一句：这些主题都是自己画的"],["","上一篇的排版，底子来自一个开源项目。自己发文章用没有问题，但要把 Skill 分享出去，直接打包别人的主题并不合适。"],["h","02　按文章类型选，不按颜色选"],["","青林 · 经典通用｜白皮 · 头部IP｜陶土 · 故事随笔｜蓝图 · 实操教程｜便签 · 知识手帐｜墨刊 · 头条热点"],["h","03　每个系列，配一篇自己的样例"],["","同一篇文章排六遍，只能看出颜色不同。所以每个系列都配了一篇短样例，题材按它最擅长的来选。"],["h","04　字号、行距、边距，每个系列都不一样"],["","我们以公众号常用的一组参数为基准：正文 15px、行高 1.75、字距 1px、段后 24px、两侧 16px。"],["h","最后：先挑一个系列试试"],["","你下一篇文章，最想用哪个系列来排？"]];
 $("#doc").innerHTML=DOC.map(function(p,i){return'<p class="'+p[0]+'" data-i="'+i+'">'+esc(p[1])+'</p>'}).join("");
 var SC=[["立意",4],["结构",4],["证据",3],["语言",4],["读者",4]];
-$("#bars").innerHTML=SC.map(function(s){return'<div class="bar"><span>'+s[0]+'</span><i><s style="width:'+s[1]*25+'%"></s></i><b>'+s[1]+'</b></div>'}).join("");
+$("#bars").innerHTML=SC.map(function(s){return'<div class="bar"><span>'+s[0]+'</span><i><s style="width:'+s[1]*25+'%"></s></i><b>'+(s[1]>=3?'':'弱')+'</b></div>'}).join("");
 var ISS=[["p1","P1","「公众号常用的一组参数」：“常用”没有依据，补一句来源，或写明是经验值。",10],["p1","P1","「底子来自一个开源项目」：写出项目名或链接，读者也能理解为什么要重画。",4],["p2","P2","「白皮 · 头部IP」：新读者不懂“头部IP”指什么，表里补半句。",6],["p2","P2","「所以每个系列都配了一篇短样例」：和开头意思重复，只留“题材按它最擅长的来选”。",8],["ok","好","开头三句就讲清和读者的关系：回答上一篇后台问得最多的问题。",1],["ok","好","结尾的提问和全文直接相关，不是套话。",12]];
 $("#iss").innerHTML=ISS.map(function(x,i){return'<li data-p="'+x[3]+'"><span class="tag '+x[0]+'">'+x[1]+'</span>'+esc(x[2])+'</li>'}).join("");
 [].forEach.call(document.querySelectorAll("#iss li"),function(li){li.onclick=function(){[].forEach.call(document.querySelectorAll("#iss li"),function(x){x.classList.toggle("on",x===li)});[].forEach.call(document.querySelectorAll("#doc p"),function(p){p.classList.toggle("hl",p.dataset.i===li.dataset.p)})}});

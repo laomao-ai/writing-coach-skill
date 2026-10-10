@@ -20,27 +20,27 @@
 | 斯蒂芬·金 | 《写作这回事》（2000） | masters/king.md | 概念已核 |
 | 罗伯特·麦基 | 《故事》（1997） | masters/mckee.md | 概念已核 |
 
-## 方法与练法（methods/、drills/）
+## 方法与练法（methods.md、drills.md）
 | 作者 / 来源 | 书 | 用在 |
 |---|---|---|
-| 芭芭拉·明托 | 《金字塔原理》 | methods/pyramid.md、scqa.md |
-| 高杉尚孝 | 《麦肯锡教我的写作武器》 | methods/pyramid.md |
-| 奇普·希思、丹·希思 | 《让创意更有黏性》 | methods/success.md |
-| 申克·阿伦斯 | 《卡片笔记写作法》 | methods/zettelkasten.md |
-| 约瑟夫·威廉姆斯 | 《风格：清晰与优雅》 | methods/williams.md |
-| 海明威 | 冰山理论（《午后之死》） | methods/iceberg.md |
-| 费曼（后人总结） | 费曼技巧 | methods/feynman.md |
-| 本杰明·富兰克林 | 《富兰克林自传》 | drills/ |
-| 娜塔莉·戈德堡 | 《写出我心》 | drills/ |
-| 安妮·拉莫特 | 《一只鸟接着一只鸟》 | drills/ |
-| 安德斯·艾利克森 | 《刻意练习》 | drills/ |
-| 吕叔湘 | 《语文常谈》 | checklists/typo-zh.md 参考 |
+| 芭芭拉·明托 | 《金字塔原理》 | methods.md#pyramid、#scqa |
+| 高杉尚孝 | 《麦肯锡教我的写作武器》 | methods.md#pyramid |
+| 奇普·希思、丹·希思 | 《让创意更有黏性》 | methods.md#success |
+| 申克·阿伦斯 | 《卡片笔记写作法》 | methods.md#zettelkasten |
+| 约瑟夫·威廉姆斯 | 《风格：清晰与优雅》 | methods.md#williams |
+| 海明威 | 冰山理论（《午后之死》） | methods.md#iceberg |
+| 费曼（后人总结） | 费曼技巧 | methods.md#feynman |
+| 本杰明·富兰克林 | 《富兰克林自传》 | drills.md |
+| 娜塔莉·戈德堡 | 《写出我心》 | drills.md |
+| 安妮·拉莫特 | 《一只鸟接着一只鸟》 | drills.md |
+| 安德斯·艾利克森 | 《刻意练习》 | drills.md |
+| 吕叔湘 | 《语文常谈》 | checks.md 错别字 参考 |
 
-规范：国家标准 GB/T 15834—2011《标点符号用法》、GB/T 15835—2011《出版物上数字用法》（checklists/typo-zh.md）。
+规范：国家标准 GB/T 15834—2011《标点符号用法》、GB/T 15835—2011《出版物上数字用法》（checks.md 错别字）。
 
 ## 开源项目（只借思路，不搬原文；均为 MIT）
 - op7418/Humanizer-zh：保留事实与作者声音、不一律改写。
-- larashero3-dotcom/lieflat-less-ai-tone：语料对照得出的“哪些是真信号、哪些不是”（checklists/ai-flavor-zh.md 第 7、8 条与“不作为改写理由”）。
+- larashero3-dotcom/lieflat-less-ai-tone：语料对照得出的“哪些是真信号、哪些不是”（ai-tone.md 第 6、7 条与“不作为改写理由”）。
 - dongbeixiaohuo/writing-agent：有讨论、有审校、可追溯的共创过程。
 - larashero3-dotcom/writing-dna-skill：把风格拆成可复用规则。
 - MrGeDiao/shuorenhua：评测集与真实样本的组织方式。
