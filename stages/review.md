@@ -17,18 +17,18 @@
 | 🟡 改完再发 | 有一关 2 分，或有需要处理的 P1 |
 | 🔴 先别发 | 有阻断项（P0：事实错误、虚构引语、论证支点不成立），或有一关 ≤1 分 |
 
-五关在报告里画成 4 格条（▰▰▰▱），不在正文里写“17/20”这样的总分：差一两分对读者没有意义，结论和短板才有。总分只出现在评分块里，给别的 Agent 和流水线比较改前改后用。
+每关在报告里画成 4 格条（▰▰▰▱），不在正文里写“17/20”这样的总分：差一两分对读者没有意义，结论和短板才有。总分只出现在评分块里，给别的 Agent 和流水线比较改前改后用。
 
 ## 怎么查
 第一步先判断文体（masters/README.md 路由表），报告开头写明“文体：××”；然后按五关过一遍（评分锚点见 library/gates.md）：
 
 | 关 | 检查清单 | 方法卡（library/methods.md） |
 |---|---|---|
-| ① 立意 | library/checks.md 逻辑第 1 组 | feynman、zettelkasten |
-| ② 结构 | library/checks.md 逻辑第 2 组 | pyramid、scqa、inverted-pyramid |
-| ③ 证据 | library/checks.md 事实核查 | 观点评论用 harvard |
-| ④ 语言 | library/ai-tone.md（AI 腔单列一行）、library/checks.md 错别字 | 全局：余光中卡；按文体：williams、iceberg |
-| ⑤ 读者 | library/checks.md 逻辑第 3 组 | success |
+| 立意关 | library/checks.md 逻辑第 1 组 | feynman、zettelkasten |
+| 结构关 | library/checks.md 逻辑第 2 组 | pyramid、scqa、inverted-pyramid |
+| 证据关 | library/checks.md 事实核查 | 观点评论用 harvard |
+| 语言关 | library/ai-tone.md（AI 腔单列一行）、library/checks.md 错别字 | 全局：余光中卡；按文体：williams、iceberg |
+| 读者关 | library/checks.md 逻辑第 3 组 | success |
 
 每关引用的大师只从该文体的名单里选。体检结束时，针对得分最低的一关，从 library/drills.md 推荐一个练法。
 
