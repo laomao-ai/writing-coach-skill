@@ -1,6 +1,7 @@
 # 乔治·奥威尔 · 《政治与英语》（文章）
 来源：Politics and the English Language（George Orwell，1946）
 主管关：语言
+适用文体：通用、观点评论、测评体验
 
 ## 核心主张（自述转述，非原文摘录）
 - 不用见惯了的比喻。
